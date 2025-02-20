@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Book = ({ book }) => {
   
-    const { bookId, bookName, author, image, category, publisher, tags, rating } = book
+    const { bookId, bookName, author, image, category, publisher, tags, rating, totalPages } = book
     return (
 
         /* There are two card style first one made by me second one is from daisyUi */
@@ -49,6 +49,8 @@ const Book = ({ book }) => {
                             {category}
                         </div>
                         <div className="flex gap-6">
+                            <div>{rating}</div>
+                            <div>Total Pages: {totalPages}</div>
                             <div className="rating">
                                 <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
                                 <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
